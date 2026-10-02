@@ -18,6 +18,8 @@ export function useVacancies(): VacanciesState {
     error: null,
   });
 
+  console.log("test");
+  
   useEffect(() => {
     const controller = new AbortController();
     fetchVacancies(controller.signal)
