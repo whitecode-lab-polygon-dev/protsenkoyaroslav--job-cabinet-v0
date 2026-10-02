@@ -18,8 +18,6 @@ export function useVacancies(): VacanciesState {
     error: null,
   });
 
-  console.log('token', process.env.GITHUB_TOKEN)
-
   useEffect(() => {
     const controller = new AbortController();
     fetchVacancies(controller.signal)
